@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L13 Inheritance | Are we related?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="assets/deck.css">
+</head>
+<body>
+<main class="deck">
+
+<!-- 1. Title -->
+<section class="slide">
+  <div class="cols wide-left">
+    <div style="padding-top:2.5em">
+      <p class="kicker">Year 9 Science · Lesson 13</p>
+      <h1 style="color:var(--accent)">Inheritance</h1>
+      <p>Gametes, fertilisation and why you look like your family</p>
+    </div>
+    <figure class="sketch">
+      <img src="img/L13-puppies.jpg" alt="Two chocolate Labrador puppies looking out of a wooden box" style="max-height:640px">
+      <figcaption class="credit">Labrador puppies. Vsatinet, <a href="https://commons.wikimedia.org/wiki/File:Labrador_puppies.jpg">CC BY-SA 4.0</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 2. Starter -->
+<section class="slide">
+  <p class="kicker">Starter</p>
+  <h2>Why do you look like your family, but not exactly like any one of them?</h2>
+  <p>Think of one feature you share with your mother's side, and one with your father's side.</p>
+  <p class="step">Last lesson: your 46 chromosomes come in <b>23 pairs</b>. One of each pair came from your mother, one from your father. Today: how did they get to you?</p>
+</section>
+
+<!-- 3. Gametes -->
+<section class="slide">
+  <p class="kicker">Key word</p>
+  <h2>Gametes: the sex cells</h2>
+  <p class="def"><b>Gametes</b> are sex cells: <b>sperm</b> from the father and an <b>egg</b> from the mother.</p>
+  <ul>
+    <li class="step">A normal body cell has <b>46</b> chromosomes: 23 pairs.</li>
+    <li class="step">A gamete has only <b>23</b>: one chromosome from each pair. That's half the DNA.</li>
+    <li class="step">To make gametes, the parent first <b>copies</b> its DNA, then shares it out.</li>
+  </ul>
+</section>
+
+<!-- 4. Fertilisation diagram -->
+<section class="slide">
+  <p class="kicker">Key word</p>
+  <h2>Fertilisation makes a zygote</h2>
+  <svg class="chart" viewBox="0 0 1200 400" role="img" aria-label="Diagram: a father's body cell with 46 chromosomes makes a sperm with 23. A mother's body cell with 46 makes an egg with 23. At fertilisation the sperm and egg join to make a zygote with 46, which divides into the many cells of the offspring.">
+    <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b665f"/></marker></defs>
+    <circle cx="130" cy="100" r="62" fill="#f4dccd" stroke="#b5562b" stroke-width="4"/>
+    <text x="130" y="110" text-anchor="middle" style="font-size:30px;font-weight:600">46</text>
+    <circle cx="130" cy="290" r="62" fill="#d6e7dc" stroke="#2f6b4f" stroke-width="4"/>
+    <text x="130" y="300" text-anchor="middle" style="font-size:30px;font-weight:600">46</text>
+    <line x1="200" y1="100" x2="322" y2="100" stroke="#5b665f" stroke-width="3" marker-end="url(#arr)"/>
+    <line x1="200" y1="290" x2="355" y2="290" stroke="#5b665f" stroke-width="3" marker-end="url(#arr)"/>
+    <path d="M335,100 q15,-20 30,0 t30,0 t25,0" fill="none" stroke="#b5562b" stroke-width="4"/>
+    <circle cx="450" cy="100" r="30" fill="#f4dccd" stroke="#b5562b" stroke-width="4"/>
+    <text x="450" y="109" text-anchor="middle" style="font-size:24px;font-weight:600">23</text>
+    <circle cx="420" cy="290" r="55" fill="#d6e7dc" stroke="#2f6b4f" stroke-width="4"/>
+    <text x="420" y="299" text-anchor="middle" style="font-size:28px;font-weight:600">23</text>
+    <line x1="485" y1="112" x2="690" y2="175" stroke="#5b665f" stroke-width="3" marker-end="url(#arr)"/>
+    <line x1="485" y1="270" x2="690" y2="210" stroke="#5b665f" stroke-width="3" marker-end="url(#arr)"/>
+    <path d="M770,125 a68,68 0 0,0 0,136 z" fill="#f4dccd"/>
+    <path d="M770,125 a68,68 0 0,1 0,136 z" fill="#d6e7dc"/>
+    <circle cx="770" cy="193" r="68" fill="none" stroke="#1f2a24" stroke-width="4"/>
+    <text x="770" y="203" text-anchor="middle" style="font-size:30px;font-weight:600">46</text>
+    <line x1="850" y1="193" x2="960" y2="193" stroke="#5b665f" stroke-width="3" marker-end="url(#arr)"/>
+    <g fill="#e9e4d8" stroke="#5b665f" stroke-width="2">
+      <circle cx="1010" cy="150" r="22"/><circle cx="1055" cy="150" r="22"/><circle cx="1100" cy="150" r="22"/>
+      <circle cx="1032" cy="193" r="22"/><circle cx="1077" cy="193" r="22"/><circle cx="1122" cy="193" r="22"/>
+      <circle cx="1010" cy="236" r="22"/><circle cx="1055" cy="236" r="22"/><circle cx="1100" cy="236" r="22"/>
+    </g>
+    <text x="130" y="385" text-anchor="middle" class="title">Parents' cells</text>
+    <text x="420" y="385" text-anchor="middle" class="title">Gametes</text>
+    <text x="770" y="385" text-anchor="middle" class="title">Zygote</text>
+    <text x="1065" y="385" text-anchor="middle" class="title">Offspring</text>
+    <text x="130" y="26" text-anchor="middle">Father</text>
+    <text x="130" y="218" text-anchor="middle">Mother</text>
+    <text x="450" y="55" text-anchor="middle">Sperm</text>
+    <text x="420" y="225" text-anchor="middle">Egg</text>
+    <text x="625" y="190" text-anchor="middle">fertilisation</text>
+    <text x="1065" y="290" text-anchor="middle">trillions of cells,</text>
+    <text x="1065" y="312" text-anchor="middle">each with 46</text>
+  </svg>
+  <p class="step def"><b>Fertilisation</b> is when a sperm and an egg join. The new cell, the <b>zygote</b>, has 46 chromosomes: half from each parent.</p>
+</section>
+
+<!-- 5. Key words -->
+<section class="slide">
+  <p class="kicker">Key words · learn these</p>
+  <h2>Four words for describing inheritance</h2>
+  <div class="cards" style="grid-template-columns:1fr 1fr">
+    <div class="card"><div class="word">Gamete</div><div class="meaning">A sex cell (sperm or egg). Carries one copy of each chromosome: half the parent's DNA.</div></div>
+    <div class="card"><div class="word">Fertilisation</div><div class="meaning">When a sperm and an egg join, combining their DNA.</div></div>
+    <div class="card"><div class="word">Zygote</div><div class="meaning">The fertilised egg. It has DNA from both parents and divides to make every cell of the new organism.</div></div>
+    <div class="card"><div class="word">Inherited</div><div class="meaning">Passed from parents to offspring through genes in the gametes.</div></div>
+  </div>
+</section>
+
+<!-- 6. Alleles -->
+<section class="slide">
+  <p class="kicker">Going further</p>
+  <h2>Two copies of every gene</h2>
+  <p>Because you have two copies of each chromosome, you have <b>two copies of every gene</b>: one from each parent.</p>
+  <p class="step def">A gene can come in different versions, called <b>alleles</b>. The gene for eye colour has a brown allele, a blue allele and others.</p>
+  <p class="step">Each gamete gets just <b>one</b> allele of each gene, and which one is down to chance. So every sperm and every egg is different.</p>
+  <p class="step">That's why brothers and sisters look alike, but not identical. Only identical twins, who come from one zygote, share all their DNA.</p>
+</section>
+
+<!-- 7. Mutations -->
+<section class="slide">
+  <p class="kicker">Closing the loop</p>
+  <h2>When copying goes wrong</h2>
+  <p>Every time DNA is copied there is a small chance of a mistake. A mistake in DNA is a <b>mutation</b>.</p>
+  <ul class="step">
+    <li>Most mutations do nothing, or cause harm.</li>
+    <li>A few are helpful.</li>
+    <li>A mutation in a gamete can be <b>inherited</b>.</li>
+  </ul>
+  <p class="step def">Mutation → new <b>variation</b> → natural <b>selection</b> → over millions of generations, new species. That's how one common ancestor, 3.5 billion years ago, led to all life today.</p>
+</section>
+
+<!-- 8. Whakapapa -->
+<section class="slide">
+  <p class="kicker">Lab manual p29 to p30</p>
+  <h2>Whakapapa</h2>
+  <p>In te ao Māori, whakapapa connects people to their tūpuna (ancestors), to each other and to the natural world. It was passed down orally; some iwi used notched rākau whakapapa to help recall long genealogies.</p>
+  <p class="step">Your DNA connects you to your tūpuna too. How much of it came from each?</p>
+  <table class="taxa step">
+    <tr><th>Ancestor</th><th>How many</th><th>Share of your DNA from each, on average</th></tr>
+    <tr><td>Parents</td><td>2</td><td>50%</td></tr>
+    <tr><td>Grandparents</td><td>4</td><td>25%</td></tr>
+    <tr><td>Great-grandparents</td><td>8</td><td>12.5%</td></tr>
+  </table>
+</section>
+
+<!-- 9. Practice question -->
+<section class="slide">
+  <p class="kicker">Practise a "describe" answer · 5 minutes</p>
+  <h2>Labrador coat colour</h2>
+  <div class="cols wide-left">
+    <div>
+      <p>Labradors can be black, chocolate or yellow. Coat colour is coded for by genes and is inherited.</p>
+      <p class="def">Describe how coat colour is passed on from parent Labradors to their puppies. Include: <b>gametes</b>, <b>fertilisation</b> and <b>inherited traits</b>.</p>
+    </div>
+    <figure class="sketch">
+      <img src="img/L13-labcolours.jpg" alt="Three Labradors: chocolate, black and yellow" style="max-height:600px">
+      <figcaption class="credit">Erikeltic, <a href="https://commons.wikimedia.org/wiki/File:3labradorcols.jpg">CC BY-SA 3.0</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 10. Model answer -->
+<section class="slide">
+  <p class="kicker">Model answer</p>
+  <h2>Mark your own</h2>
+  <p class="quote" style="font-size:1em">Coat colour is controlled by <b>genes</b>, sections of DNA on chromosomes in the nucleus. <span class="step">Each parent makes <b>gametes</b>: the father makes sperm and the mother makes eggs. Each gamete carries one copy of each chromosome, so one allele of the coat colour gene.</span> <span class="step">At <b>fertilisation</b> a sperm and an egg join to make a <b>zygote</b> with two copies of each chromosome, one from each parent.</span> <span class="step">The zygote divides to form the puppy, so every cell has the coat colour genes from both parents. That's how the trait is <b>inherited</b>.</span></p>
+  <p class="step small">Check: genes on DNA? Gametes, with one copy each? Fertilisation and zygote? One copy from each parent? A link back to coat colour?</p>
+</section>
+
+<!-- 11. Exit -->
+<section class="slide">
+  <p class="kicker">Exit question</p>
+  <h2>Why do you have features from both sides of your family?</h2>
+  <p>Answer in one paragraph. Use the words <b>gamete</b>, <b>fertilisation</b> and <b>inherited</b>.</p>
+</section>
+
+<!-- 12. Missed this lesson? -->
+<section class="slide">
+  <p class="kicker">Away today?</p>
+  <h2>Missed this lesson? Catch up here</h2>
+  <ul>
+    <li>Learn the four key words on slide 5, and copy the fertilisation diagram on slide 4.</li>
+    <li>Lab manual p29 to p30: complete your family tree and the percentages of DNA from each ancestor.</li>
+    <li>Write your own answer to the Labrador question (slide 9) before you read the model answer.</li>
+    <li>Exit question: why do you have features from both sides of your family?</li>
+  </ul>
+</section>
+
+</main>
+<script src="assets/deck.js"></script>
+</body>
+</html>
